@@ -1,0 +1,9 @@
+version: '3'
+services:
+  prometheus_storcli-exporter:
+    image: vaa12345/prometheus-storcli:latest
+    container_name: prometheus_storcli-exporter
+    privileged: true
+    ports:
+      - "127.0.0.1:9909:9909"
+    restart: unless-stopped
