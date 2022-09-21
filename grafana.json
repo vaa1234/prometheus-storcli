@@ -1,0 +1,1120 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 31,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "37ehD1i4z"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "right",
+              "displayMode": "auto",
+              "inspect": false
+            },
+            "displayName": "",
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Healthy"
+              },
+              "properties": [
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "0": {
+                          "index": 1,
+                          "text": "No"
+                        },
+                        "1": {
+                          "index": 0,
+                          "text": "Yes"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ]
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Battery healthy"
+              },
+              "properties": [
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "0": {
+                          "index": 1,
+                          "text": "No"
+                        },
+                        "1": {
+                          "index": 0,
+                          "text": "Yes"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ]
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background-solid"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Degraded"
+              },
+              "properties": [
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "0": {
+                          "index": 0,
+                          "text": "No"
+                        },
+                        "1": {
+                          "index": 1,
+                          "text": "Yes"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ]
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background-solid"
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "red",
+                        "value": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Failed"
+              },
+              "properties": [
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "0": {
+                          "index": 0,
+                          "text": "No"
+                        },
+                        "1": {
+                          "index": 1,
+                          "text": "Yes"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ]
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background-solid"
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "red",
+                        "value": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "instance"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 126
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "controller"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 104
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "model"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 271
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "serial"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 113
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "fwversion"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 140
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 4,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 27,
+        "options": {
+          "footer": {
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": true,
+          "sortBy": []
+        },
+        "pluginVersion": "9.0.7",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "expr": "megaraid_controller_info{job=\"storcli\"}",
+            "format": "table",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_degraded{job=\"storcli\"}) by (controller)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_failed{job=\"storcli\"}) by (controller)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_battery_backup_healthy{job=\"storcli\"}) by (controller)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_healthy{job=\"storcli\"}) by (controller)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "B"
+          }
+        ],
+        "title": "Controllers list",
+        "transformations": [
+          {
+            "id": "merge",
+            "options": {}
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Time": true,
+                "Value #A": true,
+                "Value #B": false,
+                "__name__": true,
+                "job": true
+              },
+              "indexByName": {
+                "Time": 3,
+                "Value #A": 8,
+                "Value #B": 9,
+                "Value #C": 11,
+                "Value #D": 12,
+                "Value #E": 10,
+                "__name__": 4,
+                "controller": 1,
+                "fwversion": 5,
+                "instance": 0,
+                "job": 6,
+                "model": 2,
+                "serial": 7
+              },
+              "renameByName": {
+                "Value #A": "testa",
+                "Value #B": "Healthy",
+                "Value #C": "Degraded",
+                "Value #D": "Failed",
+                "Value #E": "Battery healthy"
+              }
+            }
+          }
+        ],
+        "type": "table"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "37ehD1i4z"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "right",
+              "displayMode": "auto",
+              "inspect": false
+            },
+            "decimals": 0,
+            "displayName": "",
+            "mappings": [
+              {
+                "options": {
+                  "Onln": {
+                    "color": "green",
+                    "index": 0,
+                    "text": "Online"
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 1
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 1
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "controller"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 90
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "enclosure"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 89
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "slot"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 59
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Degraded"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 87
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "disk_id"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 76
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "model"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 153
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "serial"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 104
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "instance"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 124
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "state"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 79
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Speed"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 80
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Media errors"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 109
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Predictive errors"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 124
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Other errors"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 124
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Value #F"
+              },
+              "properties": [
+                {
+                  "id": "mappings",
+                  "value": [
+                    {
+                      "options": {
+                        "0": {
+                          "index": 0,
+                          "text": "No"
+                        }
+                      },
+                      "type": "value"
+                    }
+                  ]
+                },
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background-solid"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Smart alerted"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 123
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 24,
+          "x": 0,
+          "y": 4
+        },
+        "id": 28,
+        "options": {
+          "footer": {
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "frameIndex": 0,
+          "showHeader": true,
+          "sortBy": []
+        },
+        "pluginVersion": "9.0.7",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "expr": "megaraid_pd_info{job=\"storcli\"}",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "refId": "A"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_pd_link_speed_gbps{job=\"storcli\"}) by (controller, enclosure, instance, slot)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "B"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_pd_media_errors{job=\"storcli\"}) by (controller, enclosure, instance, slot)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "C"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_pd_predictive_errors{job=\"storcli\"}) by (controller, enclosure, instance, slot)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "D"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_pd_other_errors{job=\"storcli\"}) by (controller, enclosure, instance, slot)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "E"
+          },
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "exemplar": false,
+            "expr": "sum(megaraid_pd_smart_alerted{job=\"storcli\"}) by (controller, enclosure, instance, slot)",
+            "format": "table",
+            "hide": false,
+            "instant": true,
+            "legendFormat": "__auto",
+            "range": false,
+            "refId": "F"
+          }
+        ],
+        "title": "Disks list",
+        "transformations": [
+          {
+            "id": "merge",
+            "options": {}
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Time": true,
+                "Value #A": true,
+                "__name__": true,
+                "firmware": true,
+                "interface": true,
+                "job": true,
+                "media": true
+              },
+              "indexByName": {
+                "DG": 5,
+                "Time": 4,
+                "Value #A": 15,
+                "Value #B": 16,
+                "__name__": 6,
+                "controller": 1,
+                "disk_id": 7,
+                "enclosure": 2,
+                "firmware": 8,
+                "instance": 0,
+                "interface": 9,
+                "job": 10,
+                "media": 11,
+                "model": 12,
+                "serial": 13,
+                "slot": 3,
+                "state": 14
+              },
+              "renameByName": {
+                "DG": "Degraded",
+                "Value #B": "Speed",
+                "Value #C": "Media errors",
+                "Value #D": "Predictive errors",
+                "Value #E": "Other errors",
+                "Value #F": "Smart alerted"
+              }
+            }
+          }
+        ],
+        "type": "table"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "37ehD1i4z"
+        },
+        "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "right",
+              "displayMode": "auto",
+              "inspect": false
+            },
+            "decimals": 2,
+            "displayName": "",
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "state"
+              },
+              "properties": [
+                {
+                  "id": "custom.displayMode",
+                  "value": "color-background-solid"
+                },
+                {
+                  "id": "thresholds",
+                  "value": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 4,
+          "w": 24,
+          "x": 0,
+          "y": 10
+        },
+        "id": 29,
+        "options": {
+          "footer": {
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": true,
+          "sortBy": []
+        },
+        "pluginVersion": "9.0.7",
+        "targets": [
+          {
+            "datasource": {
+              "type": "prometheus",
+              "uid": "37ehD1i4z"
+            },
+            "editorMode": "code",
+            "expr": "megaraid_vd_info{job=\"storcli\"}",
+            "format": "table",
+            "instant": true,
+            "interval": "",
+            "legendFormat": "__auto",
+            "refId": "A"
+          }
+        ],
+        "title": "Virtual groups list",
+        "transformations": [
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Time": true,
+                "Value": true,
+                "__name__": true,
+                "job": true
+              },
+              "indexByName": {
+                "DG": 4,
+                "Time": 3,
+                "VG": 2,
+                "Value": 10,
+                "__name__": 7,
+                "cache": 8,
+                "controller": 1,
+                "instance": 0,
+                "job": 9,
+                "state": 5,
+                "type": 6
+              },
+              "renameByName": {
+                "DG": "Degraded"
+              }
+            }
+          }
+        ],
+        "type": "table"
+      }
+    ],
+    "schemaVersion": 36,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "selected": false,
+            "text": "localhost:9909",
+            "value": "localhost:9909"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "37ehD1i4z"
+          },
+          "definition": "label_values(megaraid_controller_info, instance)",
+          "hide": 0,
+          "includeAll": false,
+          "label": "Host:",
+          "multi": false,
+          "name": "node",
+          "options": [],
+          "query": {
+            "query": "label_values(megaraid_controller_info, instance)",
+            "refId": "Prometheus-node-Variable-Query"
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "current": {
+            "selected": false,
+            "text": "0",
+            "value": "0"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "37ehD1i4z"
+          },
+          "definition": "label_values(megaraid_pd_info{instance=~\"$node\"}, controller)",
+          "hide": 0,
+          "includeAll": false,
+          "label": "Controller RAID:",
+          "multi": false,
+          "name": "controller",
+          "options": [],
+          "query": {
+            "query": "label_values(megaraid_pd_info{instance=~\"$node\"}, controller)",
+            "refId": "Prometheus-controller-Variable-Query"
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "current": {
+            "selected": false,
+            "text": "9",
+            "value": "9"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "37ehD1i4z"
+          },
+          "definition": "label_values(megaraid_pd_info{instance=~\"$node\"}, enclosure)",
+          "hide": 0,
+          "includeAll": false,
+          "label": "Enclosure:",
+          "multi": false,
+          "name": "enclosure",
+          "options": [],
+          "query": {
+            "query": "label_values(megaraid_pd_info{instance=~\"$node\"}, enclosure)",
+            "refId": "Prometheus-enclosure-Variable-Query"
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        },
+        {
+          "current": {
+            "selected": false,
+            "text": "0",
+            "value": "0"
+          },
+          "datasource": {
+            "type": "prometheus",
+            "uid": "37ehD1i4z"
+          },
+          "definition": "label_values(megaraid_pd_info{instance=~\"$node\"}, slot)",
+          "hide": 0,
+          "includeAll": false,
+          "label": "Slot:",
+          "multi": false,
+          "name": "slot",
+          "options": [],
+          "query": {
+            "query": "label_values(megaraid_pd_info{instance=~\"$node\"}, slot)",
+            "refId": "Prometheus-slot-Variable-Query"
+          },
+          "refresh": 1,
+          "regex": "",
+          "skipUrlSync": false,
+          "sort": 0,
+          "tagValuesQuery": "",
+          "tagsQuery": "",
+          "type": "query",
+          "useTags": false
+        }
+      ]
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ]
+    },
+    "timezone": "",
+    "title": "MegaRAID Health",
+    "uid": "6xABOS9iz",
+    "version": 19,
+    "weekStart": ""
+  }
